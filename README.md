@@ -1,75 +1,74 @@
-# React + TypeScript + Vite
+# 🦷 SorrisoScript — Clínica Odontológica
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Cuidando de sorrisos com uma experiência digital moderna e acolhedora.
 
-Currently, two official plugins are available:
+A **SorrisoScript** é um projeto de website demonstrativo voltado ao segmento de saúde e odontologia, desenvolvido com foco em **design moderno, responsividade, acessibilidade e experiência do usuário (UX/UI)**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O projeto busca representar a presença digital de uma clínica odontológica, combinando uma identidade visual profissional com uma interface intuitiva, organizada e acolhedora.
 
-## React Compiler
+🔗 **[Acessar o site](https://clinica-odontologica-swart.vercel.app/)**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> **Projeto demonstrativo:** Este website foi desenvolvido exclusivamente para fins de estudo, prática e composição de portfólio profissional. Não representa uma clínica odontológica real nem oferece serviços de saúde.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Sobre o Projeto
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+A SorrisoScript foi idealizada com o objetivo de explorar o desenvolvimento de uma interface web voltada ao setor odontológico, priorizando a clareza das informações, a apresentação profissional e a facilidade de navegação.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+O desenvolvimento tem como proposta três aspectos fundamentais:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Design:** identidade visual moderna, limpa e alinhada ao segmento da saúde.
+- **Usabilidade:** interface intuitiva, com informações organizadas para facilitar a experiência dos visitantes.
+- **Responsividade:** proposta de adaptação da interface para diferentes dispositivos e tamanhos de tela.
 
-```
+## Funcionalidades e Estrutura
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+O projeto apresenta uma proposta de interface institucional voltada à divulgação de serviços odontológicos, com atenção aos seguintes elementos:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Página inicial com apresentação da clínica.
+- Comunicação visual voltada à saúde e ao bem-estar.
+- Apresentação institucional de serviços e tratamentos odontológicos.
+- Organização das informações para facilitar a navegação.
+- Elementos visuais que transmitem profissionalismo e confiança.
+- Estrutura pensada para uma experiência de navegação clara e acessível.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Identidade Visual
 
-```
+A identidade visual da SorrisoScript foi concebida para transmitir **confiança, cuidado, profissionalismo e acolhimento**, características importantes para o segmento odontológico.
+
+A proposta valoriza uma composição visual limpa, tipografia legível, organização dos conteúdos e elementos gráficos que contribuem para uma experiência digital agradável.
+
+## Objetivo
+
+Este projeto foi desenvolvido para colocar em prática conhecimentos relacionados ao desenvolvimento de interfaces web e à criação de experiências digitais para o setor de serviços.
+
+Além da apresentação visual, a SorrisoScript representa uma oportunidade de explorar conceitos como:
+
+- Desenvolvimento de websites institucionais.
+- Organização e hierarquia visual de informações.
+- Experiência e interface do usuário (UX/UI).
+- Design responsivo.
+- Comunicação digital para empresas do setor de saúde.
+
+## Demonstração
+
+O projeto está disponível para visualização através da plataforma Vercel.
+
+🌐 **Site:** https://clinica-odontologica-swart.vercel.app/
+
+## Status do Projeto
+
+**Projeto demonstrativo publicado.**
+
+O website poderá receber melhorias de interface, ajustes de responsividade e novas funcionalidades conforme sua evolução.
+
+## Autor
+
+Desenvolvido por **Ray** como parte do portfólio de projetos web.
+
+**GitHub:** [@raaycunha](https://github.com/raaycunha)
+
+---
+
+**SorrisoScript — Tecnologia e cuidado em cada sorriso.**
