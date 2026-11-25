@@ -120,7 +120,7 @@ const Services = () => {
           }}
         >
           {allServices.map((item) => (
-            <SwiperSlide key={item.id} className="!h-auto flex">
+            <SwiperSlide key={item.id} className="h-auto! flex">
               <article
                 className="
                   flex
