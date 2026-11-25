@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import { classSubTitle, classTitle } from "../classes/ClassText";
-import Reveal from "../components/Reveal";
 import { allServices } from "../data/services";
 
 const classArrow =
