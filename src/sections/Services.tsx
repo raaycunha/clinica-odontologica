@@ -91,6 +91,7 @@ const Services = () => {
       {/* Carrossel */}
       <div className="pt-3 sm:pt-4">
         <Swiper
+          className="[&>.swiper-wrapper]:items-stretch"
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
@@ -120,10 +121,9 @@ const Services = () => {
           }}
         >
           {allServices.map((item) => (
-            <SwiperSlide key={item.id} className="h-auto">
-              <Reveal delay={0.01}>
-                <article
-                  className="
+            <SwiperSlide key={item.id} className="!h-auto flex">
+              <article
+                className="
                   flex
                   h-full
                   w-full
@@ -139,27 +139,27 @@ const Services = () => {
                   lg:hover:-translate-y-1
                   lg:hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)]
                 "
-                >
-                  {/* Imagem */}
-                  <div className="relative">
-                    <img
-                      src={`/images/img-services/${item.image}`}
-                      alt={item.title}
-                      width={400}
-                      height={235}
-                      loading="lazy"
-                      className="
+              >
+                {/* Imagem */}
+                <div className="relative">
+                  <img
+                    src={`/images/img-services/${item.image}`}
+                    alt={item.title}
+                    width={400}
+                    height={235}
+                    loading="lazy"
+                    className="
                       h-48
                       w-full
                       object-cover
                       sm:h-52
                       lg:h-56
                     "
-                    />
+                  />
 
-                    {/* Ícone */}
-                    <div
-                      className="
+                  {/* Ícone */}
+                  <div
+                    className="
                       absolute
                       bottom-0
                       left-5
@@ -177,26 +177,26 @@ const Services = () => {
                       lg:h-18
                       lg:w-18
                     "
-                    >
-                      <img
-                        src={`/images/icons-services/${item.icon}`}
-                        alt={`Icon ${item.title}`}
-                        width={100}
-                        height={100}
-                        aria-hidden="true"
-                        className="
+                  >
+                    <img
+                      src={`/images/icons-services/${item.icon}`}
+                      alt={`Icon ${item.title}`}
+                      width={100}
+                      height={100}
+                      aria-hidden="true"
+                      className="
                         h-full
                         w-full
                         rounded-full
                         object-contain
                       "
-                      />
-                    </div>
+                    />
                   </div>
+                </div>
 
-                  {/* Conteúdo */}
-                  <div
-                    className="
+                {/* Conteúdo */}
+                <div
+                  className="
                     flex
                     flex-1
                     flex-col
@@ -209,32 +209,32 @@ const Services = () => {
                     sm:pt-11
                     lg:pt-12
                   "
-                  >
-                    <h3
-                      className="
+                >
+                  <h3
+                    className="
                       text-base
                       font-semibold
                       text-gray-950
                       sm:text-lg
                     "
-                    >
-                      {item.title}
-                    </h3>
+                  >
+                    {item.title}
+                  </h3>
 
-                    <p
-                      className="
+                  <p
+                    className="
                       flex-1
                       text-sm
                       leading-relaxed
                       text-gray-600
                     "
-                    >
-                      {item.text}
-                    </p>
+                  >
+                    {item.text}
+                  </p>
 
-                    <button
-                      type="button"
-                      className="
+                  <button
+                    type="button"
+                    className="
                       mt-2
                       flex
                       items-center
@@ -247,13 +247,12 @@ const Services = () => {
                       hover:gap-3
                       sm:text-base
                     "
-                    >
-                      Ler mais
-                      <BsArrowRight className="text-base" aria-hidden="true" />
-                    </button>
-                  </div>
-                </article>
-              </Reveal>
+                  >
+                    Ler mais
+                    <BsArrowRight className="text-base" aria-hidden="true" />
+                  </button>
+                </div>
+              </article>
             </SwiperSlide>
           ))}
         </Swiper>

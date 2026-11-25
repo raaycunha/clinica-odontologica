@@ -103,6 +103,7 @@ const Reviews = () => {
       {/* Carrossel */}
       <div className="pt-3 sm:pt-4">
         <Swiper
+          className="[&>.swiper-wrapper]:items-stretch"
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
@@ -132,10 +133,9 @@ const Reviews = () => {
           }}
         >
           {allReviews.map((item) => (
-            <SwiperSlide key={item.id} className="h-auto">
-              <Reveal delay={0.01}>
-                <article
-                  className="
+            <SwiperSlide key={item.id} className="!h-auto flex">
+              <article
+                className="
                   flex
                   h-full
                   min-h-82.5
@@ -155,48 +155,48 @@ const Reviews = () => {
                   lg:hover:-translate-y-1
                   lg:hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)]
                 "
-                >
-                  {/* Avaliação */}
-                  <div className="flex flex-col gap-4">
-                    <div
-                      aria-label="Avaliação: 5 de 5 estrelas"
-                      className="
+              >
+                {/* Avaliação */}
+                <div className="flex flex-col gap-4">
+                  <div
+                    aria-label="Avaliação: 5 de 5 estrelas"
+                    className="
                       flex
                       items-center
                       gap-1
                       text-[#1E63D4]
                     "
-                    >
-                      {Array.from({ length: 5 }).map((_, index) => (
-                        <BsStarFill
-                          key={index}
-                          aria-hidden="true"
-                          className="text-base sm:text-lg"
-                        />
-                      ))}
-                    </div>
+                  >
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <BsStarFill
+                        key={index}
+                        aria-hidden="true"
+                        className="text-base sm:text-lg"
+                      />
+                    ))}
+                  </div>
 
-                    <p
-                      className="
+                  <p
+                    className="
                       text-sm
                       leading-relaxed
                       text-gray-700
                       sm:text-base
                     "
-                    >
-                      “{item.text}”
-                    </p>
-                  </div>
+                  >
+                    “{item.text}”
+                  </p>
+                </div>
 
-                  {/* Paciente */}
-                  <div className="flex items-center gap-3">
-                    <img
-                      src={`/images/img-reviews/${item.image}`}
-                      alt={`Foto de ${item.name}`}
-                      loading="lazy"
-                      width={80}
-                      height={80}
-                      className="
+                {/* Paciente */}
+                <div className="flex items-center gap-3">
+                  <img
+                    src={`/images/img-reviews/${item.image}`}
+                    alt={`Foto de ${item.name}`}
+                    loading="lazy"
+                    width={80}
+                    height={80}
+                    className="
                       h-14
                       w-14
                       shrink-0
@@ -205,31 +205,31 @@ const Reviews = () => {
                       sm:h-16
                       sm:w-16
                     "
-                    />
+                  />
 
-                    <div className="flex min-w-0 flex-col">
-                      <span
-                        className="
+                  <div className="flex min-w-0 flex-col">
+                    <span
+                      className="
                         font-bold
                         text-gray-950
                       "
-                      >
-                        {item.name}
-                      </span>
+                    >
+                      {item.name}
+                    </span>
 
-                      <span
-                        className="
+                    <span
+                      className="
                         mb-2
                         text-xs
                         text-gray-600
                         sm:text-sm
                       "
-                      >
-                        {item.local}
-                      </span>
+                    >
+                      {item.local}
+                    </span>
 
-                      <span
-                        className="
+                    <span
+                      className="
                         w-fit
                         rounded-full
                         bg-[#1e64d418]
@@ -240,13 +240,12 @@ const Reviews = () => {
                         text-[#1E63D4]
                         sm:text-sm
                       "
-                      >
-                        {item.service}
-                      </span>
-                    </div>
+                    >
+                      {item.service}
+                    </span>
                   </div>
-                </article>
-              </Reveal>
+                </div>
+              </article>
             </SwiperSlide>
           ))}
         </Swiper>
